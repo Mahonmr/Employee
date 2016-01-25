@@ -6,8 +6,12 @@
   <label for="name"></label>
   <input id="name" name="name" type="hidden" value="<%= @employee.name %>">
 
-  <label for="division_id"></label>
-  <input id="division_id" name="division_id" type="number" value="<%= @employee.division_id %>">
+  <label for="division_id">Select A Division</label>
+  <select name="division_id">
+    <% Division.all.each do |division| %>
+      <option value="<%= division.id %>"><%= division.name %></option>
+    <% end %>
+  </select><br>
 
   <button type="submit">Update</button>
 </form>

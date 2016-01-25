@@ -3,3 +3,7 @@ body {
   font-family: 'Josefin Sans';
   background-color: #d0d6e7
 }
+
+a {
+  font-size: 22px;
+}
