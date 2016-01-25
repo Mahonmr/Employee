@@ -5,7 +5,7 @@ Company Employees
 
 <% @employees.each() do |employee| %>
     <li><%= employee.name %>, Division <%= employee.division.name unless employee.division_id.nil? %><br>
-      <a href="/employees/<%= employee.id() %>/assign">-Assign</a><br>
+      <a href="/employees/<%= employee.id() %>/assign">-Assign Division</a><br>
       <a href="/employees/<%= employee.id() %>/delete">-Delete</a><br>
     </li>
   <% end %>

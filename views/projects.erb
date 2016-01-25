@@ -1,0 +1,17 @@
+Company Projects
+<br>
+
+<a href="/projects/new">Add New Project</a>
+
+<% @projects.each() do |project| %>
+    <li><%= project.name %>
+      <br>Assigned Employees: <br>
+      <% project.employees.each do |employee| %>
+      <%= employee.name %><br>
+      <% end %><br>
+      <a href="/projects/<%= project.id() %>/assign">-Assign</a><br>
+      <a href="/projects/<%= project.id() %>/delete">-Delete</a><br>
+    </li>
+  <% end %>
+<br>
+<a href="/">Home</a>

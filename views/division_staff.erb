@@ -1,9 +1,14 @@
 Division Employees
 <br>
-
+<% if @division.employees.any?() %>
 <% @division.employees.each() do |employee| %>
     <li><%= employee.name %>
     </li>
   <% end %>
+  <% else %>
+  <p>
+    There are no employees!
+  </p>
+  <%end%>
 <br>
 <a href="/">Home</a>
