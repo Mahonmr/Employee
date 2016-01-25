@@ -30,6 +30,11 @@ get('/divisions/:id/edit') do
   erb(:division_edit)
 end
 
+get('/divisions/:id/staff') do
+  @division = Division.find(params.fetch("id").to_i)
+  erb(:division_staff)
+end
+
 post('/divisions') do
   Division.create(params).save
   redirect ('/divisions')

@@ -5,6 +5,7 @@ Company Divisions
 
 <% @divisions.each() do |division| %>
     <li><%= division.name %>, <%= division.id %><br>
+      <a href="/divisions/<%= division.id() %>/staff">See Employees</a><br>
       <a href="/divisions/<%= division.id() %>">Edit</a><br>
       <a href="/divisions/<%= division.id() %>/delete">Delete</a><br>
     </li>
