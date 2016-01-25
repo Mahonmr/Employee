@@ -1,0 +1,13 @@
+Company Divisions
+<br>
+
+<a href="/divisions/new">Add New Division</a>
+
+<% @divisions.each() do |division| %>
+    <li><%= division.name %>, <%= division.id %><br>
+      <a href="/divisions/<%= division.id() %>">Edit</a><br>
+      <a href="/divisions/<%= division.id() %>/delete">Delete</a><br>
+    </li>
+  <% end %>
+  <br>
+  <a href="/">Home</a>

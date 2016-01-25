@@ -1,0 +1,16 @@
+Company Employees
+<br>
+
+<a href="/employees/new">Add New Employee</a>
+
+<% @employees.each() do |employee| %>
+    <li><%= employee.name %>
+        <br>
+        Division: <%= employee.division_id %>
+        <br>
+      <a href="/employees/<%= employee.id() %>/delete">-Delete</a><br>
+      <a href="/employees/<%= employee.id() %>/assign">-Assign</a><br>
+    </li>
+  <% end %>
+<br>
+<a href="/">Home</a>

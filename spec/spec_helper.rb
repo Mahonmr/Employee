@@ -1,14 +1,13 @@
 ENV['RACK_ENV'] = 'test'
 require("rspec")
 require("pg")
-require("")
-require("")
-require('pry')
+require("sinatra/activerecord")
+require("division")
 
 RSpec.configure do |config|
   config.after(:each) do
-    DB.exec("DELETE FROM  *;")
-    DB.exec("DELETE FROM  *;")
-    DB.exec("DELETE FROM  *;")
+    Division.all().each() do |division|
+      division.destroy()
+    end
   end
 end
